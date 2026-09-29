@@ -1,0 +1,1 @@
+const menuBtn=document.getElementById("menuBtn");const nav=document.getElementById("navMenu");if(menuBtn){menuBtn.addEventListener("click",()=>nav.classList.toggle("open"))}const year=document.getElementById("year");if(year)year.textContent=new Date().getFullYear();setTimeout(()=>document.querySelectorAll(".flash").forEach(x=>x.remove()),5000);

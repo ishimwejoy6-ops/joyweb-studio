@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Services | JoyWeb Studio{% endblock %}
+{% block content %}
+<section class="page-hero"><p class="eyebrow">SERVICES</p><h1>From a simple website to complete business software.</h1></section>
+<section class="section"><div class="grid">
+{% for title,desc,price in services %}
+<article class="card"><span class="tag">{{ price }}</span><h2>{{ title }}</h2><p>{{ desc }}</p><a class="green" href="{{ url_for('contact') }}">Discuss this service →</a></article>
+{% endfor %}
+</div></section>
+{% endblock %}

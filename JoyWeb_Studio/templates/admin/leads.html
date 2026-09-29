@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Project Leads | JoyWeb Studio{% endblock %}
+{% block content %}
+<section class="page-hero"><p class="eyebrow">ADMIN DASHBOARD</p><h1>Project requests</h1><a class="green" href="{{ url_for('admin_logout') }}">Logout</a></section>
+<section class="section"><div class="table-wrap"><table><thead><tr><th>ID</th><th>Date</th><th>Name</th><th>Phone</th><th>Email</th><th>Service</th><th>Budget</th><th>Details</th></tr></thead><tbody>
+{% for lead in leads %}<tr><td>{{ lead.id }}</td><td>{{ lead.created_at }}</td><td>{{ lead.name }}</td><td>{{ lead.phone }}</td><td>{{ lead.email }}</td><td>{{ lead.service }}</td><td>{{ lead.budget }}</td><td>{{ lead.details }}</td></tr>{% else %}<tr><td colspan="8">No project requests yet.</td></tr>{% endfor %}
+</tbody></table></div></section>
+{% endblock %}

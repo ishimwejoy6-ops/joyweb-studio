@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}JoyWeb Studio | Web & Software Development{% endblock %}
+{% block content %}
+<section class="hero hero-pro">
+  <div class="hero-copy">
+    <p class="eyebrow">&lt;/&gt; WEB DEVELOPMENT • NGOZI, BURUNDI</p>
+    <h1>We build <span>modern websites</span> & business software.</h1>
+    <p class="lead">E-commerce, portfolio websites, hotel and restaurant management systems — built with clean design, responsive interfaces and practical technology.</p>
+    <div class="actions"><a class="btn primary" href="{{ url_for('contact') }}">Start a Project</a><a class="btn ghost" href="{{ url_for('portfolio') }}">View Portfolio</a></div>
+    <div class="tech-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Flask</span><span>SQLite</span></div>
+  </div>
+  <div class="hero-visual">
+    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1400&q=85" alt="Laptop used for programming">
+    <div class="code-card"><span class="green">const</span> website = <span class="blue">"ready"</span>;<br><span class="green">build</span>(website); <span class="muted">// JoyWeb Studio</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><p class="eyebrow">WHAT WE DO</p><h2>Digital solutions for real businesses</h2></div>
+  <div class="grid">
+  {% for title,desc,price in services %}
+    <article class="card"><div class="icon">&lt;/&gt;</div><h3>{{ title }}</h3><p>{{ desc }}</p><strong>{{ price }}</strong></article>
+  {% endfor %}
+  </div>
+</section>
+
+<section class="section project-showcase">
+  <div class="section-head"><p class="eyebrow">PROGRAMMING LAB</p><h2>Built with code. Designed to work.</h2><p>Visual examples showing the technology and professional development style behind JoyWeb Studio.</p></div>
+  <div class="photo-grid">
+    <figure><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85" alt="Developer coding on a laptop"><figcaption>Web Development</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=1000&q=85" alt="Modern laptop workspace"><figcaption>Responsive Design</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85" alt="Computer technology close-up"><figcaption>Software & Technology</figcaption></figure>
+  </div>
+</section>
+
+<section class="cta"><h2>Have an idea? Let's build it.</h2><p>Tell us what you need and receive a project proposal.</p><a class="btn primary" href="{{ url_for('contact') }}">Request a Quote</a></section>
+{% endblock %}

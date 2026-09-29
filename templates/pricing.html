@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Pricing | JoyWeb Studio{% endblock %}
+{% block content %}
+<section class="page-hero"><p class="eyebrow">PRICING</p><h1>Starting prices for common projects.</h1><p>Final pricing depends on features, integrations, hosting and maintenance.</p></section>
+<section class="section"><div class="pricing-grid">
+<article class="price-card"><h2>Business Website</h2><div class="price">250,000 <small>BIF+</small></div><p>Responsive pages, contact form and deployment support.</p><a class="btn primary" href="{{ url_for('contact') }}">Choose</a></article>
+<article class="price-card featured"><span class="badge">POPULAR</span><h2>E-commerce</h2><div class="price">600,000 <small>BIF+</small></div><p>Products, customers, orders, admin and payment-ready architecture.</p><a class="btn primary" href="{{ url_for('contact') }}">Choose</a></article>
+<article class="price-card"><h2>Hotel / Restaurant System</h2><div class="price">900,000 <small>BIF+</small></div><p>Operational system for reservations, orders, sales and reports.</p><a class="btn primary" href="{{ url_for('contact') }}">Choose</a></article>
+<article class="price-card"><h2>Custom Software</h2><div class="price">Quotation</div><p>Price calculated after understanding requirements.</p><a class="btn primary" href="{{ url_for('contact') }}">Request Quote</a></article>
+</div></section>
+{% endblock %}

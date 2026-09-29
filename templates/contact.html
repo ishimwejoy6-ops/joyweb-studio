@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Contact | JoyWeb Studio{% endblock %}
+{% block content %}
+<section class="page-hero"><p class="eyebrow">START A PROJECT</p><h1>Tell us what you want to build.</h1><p>Complete the form and your request will be stored in the admin dashboard.</p></section>
+<section class="section two-col">
+<div class="card"><h2>Contact</h2><p><strong>Location:</strong> {{ business.location }}</p><p><strong>Phone:</strong> {{ business.phone }}</p><p><strong>WhatsApp:</strong> {{ business.whatsapp }}</p><a class="btn primary full" href="https://wa.me/{{ business.whatsapp }}" target="_blank">Chat on WhatsApp</a></div>
+<form class="form card" method="post">
+<input name="website" class="honeypot" tabindex="-1" autocomplete="off">
+<label>Full name *<input name="name" required></label>
+<label>Phone / WhatsApp *<input name="phone" required></label>
+<label>Email<input type="email" name="email"></label>
+<label>Service *<select name="service" required><option value="">Select a service</option>{% for title,desc,price in services %}<option>{{ title }}</option>{% endfor %}</select></label>
+<label>Budget<select name="budget"><option value="">Choose a range</option><option>Under 250,000 BIF</option><option>250,000 – 600,000 BIF</option><option>600,000 – 1,000,000 BIF</option><option>Above 1,000,000 BIF</option><option>Not sure</option></select></label>
+<label>Project details *<textarea name="details" rows="7" required placeholder="Describe the website/software and important features"></textarea></label>
+<button class="btn primary full" type="submit">Send Project Request</button>
+</form>
+</section>
+{% endblock %}
